@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  genai-rag-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: enterprise-genai-rag:1.0.0
+    container_name: genai-rag-api
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_NAME=Production-Ready GenAI RAG API
+      - APP_ENV=production
+      - API_KEY=sk-enterprise-rag-prod-secret-key-2026
+      - RATE_LIMIT_PER_MINUTE=60
+      - ENABLE_PROMPT_INJECTION_DEFENSE=true
+      - MASK_PII_DATA=true
+      - TOP_K=3
+      - SIMILARITY_THRESHOLD=0.15
+      - DATABASE_URL=sqlite:///data/production_rag.db
+      - ENABLE_TELEMETRY=true
+      - LOG_LEVEL=INFO
+    volumes:
+      # Persistent volume mount for FAISS vector indexes and SQLite audit logs
+      - rag_data:/app/data
+      - rag_logs:/app/logs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  rag_data:
+    driver: local
+  rag_logs:
+    driver: local

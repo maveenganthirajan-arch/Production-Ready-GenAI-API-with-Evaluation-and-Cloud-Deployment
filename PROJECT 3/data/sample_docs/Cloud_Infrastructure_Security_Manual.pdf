@@ -1,0 +1,85 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 963 >>
+stream
+BT
+/F1 16 Tf
+50 750 Td
+(Cloud Security Manual - Page 1) Tj
+/F1 10 Tf
+0 -30 Td
+14 TL
+(ACME ENTERPRISE - CLOUD INFRASTRUCTURE & SECURITY MANUAL) '
+(Document Code: SEC-OPS-2026-V4 | Classification: Confidential) '
+(--------------------------------------------------------------------------------) '
+(1. CLOUD ARCHITECTURE AND COMPLIANCE) '
+(Production workloads are deployed across AWS us-east-1 and us-west-2 multi-AZ.) '
+(Direct public routing to database tiers is strictly prohibited.) '
+(East-west Kubernetes pod traffic enforces Mutual TLS \(mTLS\) via Istio service mesh.) '
+() '
+(2. IDENTITY AND ACCESS MANAGEMENT \(IAM\) & PASSWORDS) '
+(Corporate systems enforce a mandatory 90-day password rotation schedule.) '
+(Passwords must contain at least 14 characters with uppercase, lowercase, numbers,) '
+(and symbols.) '
+(Hardware FIDO2 WebAuthn or approved authenticator apps are required for MFA.) '
+(SMS-based 2FA is prohibited due to SIM-swapping risks.) '
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 845 >>
+stream
+BT
+/F1 16 Tf
+50 750 Td
+(Cloud Security Manual - Page 2) Tj
+/F1 10 Tf
+0 -30 Td
+14 TL
+(3. API TOKENS AND SECRET MANAGEMENT) '
+(API tokens and secrets must be stored in HashiCorp Vault or AWS Secrets Manager.) '
+(Programmatic service tokens automatically expire every 30 days.) '
+() '
+(4. INCIDENT RESPONSE & ESCALATION PROTOCOLS) '
+(Severity 1 \(Critical\): Active data breach or complete production outage.) '
+(Severity 1 incidents require response from incident commander within 15 minutes.) '
+(Public status updates must be posted on status.acme-corp.com within 45 minutes.) '
+() '
+(5. BACKUP, DISASTER RECOVERY, AND CONTINUITY) '
+(Databases enforce Recovery Point Objective \(RPO\) under 1 hour.) '
+(Recovery Time Objective \(RTO\) is strictly under 4 hours.) '
+(Automated encrypted snapshots are replicated across regions every 6 hours.) '
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> >> /Contents 6 0 R >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000127 00000 n 
+0000000224 00000 n 
+0000001238 00000 n 
+0000001364 00000 n 
+0000002260 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+2386
+%%EOF

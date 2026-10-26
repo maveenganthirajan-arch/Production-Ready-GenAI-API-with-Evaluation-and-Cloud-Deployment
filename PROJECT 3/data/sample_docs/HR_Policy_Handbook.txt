@@ -1,0 +1,33 @@
+================================================================================
+ACME ENTERPRISE - GLOBAL HUMAN RESOURCES POLICY HANDBOOK (2026 EDITION)
+Document Code: HR-POL-2026-V3
+Published: January 15, 2026
+Effective Date: February 1, 2026
+================================================================================
+
+SECTION 1: WORKING HOURS AND REMOTE WORK POLICY
+1.1 Standard Working Hours:
+All full-time employees are expected to complete 40 hours per week. Core collaboration hours are established from 10:00 AM to 4:00 PM local time, Monday through Friday, during which team members must be reachable via Slack and email.
+
+1.2 Hybrid & Remote Work Eligibility:
+Eligible employees in engineering, product, marketing, and corporate functions may work remotely up to four days per week. Remote employees are provided with a one-time home office equipment stipend of $500 upon hiring to furnish ergonomic desks, chairs, or monitors. In addition, a monthly internet connectivity reimbursement of $60 is credited on the monthly payroll.
+
+SECTION 2: PAID TIME OFF (PTO) AND LEAVE BENEFITS
+2.1 Annual Paid Leave:
+Full-time regular employees are entitled to 20 days of paid annual leave per calendar year, accrued monthly at 1.67 days per month. Unused annual leave up to a maximum of 5 days can be rolled over to the subsequent calendar year; rollover days must be utilized before March 31st.
+
+2.2 Sick and Medical Leave:
+Employees receive 10 days of paid sick leave per year for personal illness, medical appointments, or caregiving for immediate family members. Medical certificates are required only for consecutive absences exceeding 3 business days.
+
+2.3 Parental and Caregiver Leave:
+Primary caregivers are eligible for 16 weeks of fully paid parental leave following the birth, adoption, or foster placement of a child. Secondary caregivers receive 8 weeks of fully paid leave. Parental leave may be taken continuously or in two separate blocks within the first 12 months.
+
+SECTION 3: COMPENSATION, PERFORMANCES, AND BONUSES
+3.1 Performance Evaluation Cycles:
+Formal performance evaluations occur annually during the month of November. Managers evaluate goals, competencies, and deliverables. Resulting merit salary adjustments and equity refresh grants take effect on January 1st of the subsequent calendar year.
+
+3.2 Professional Development Allowance:
+Every regular employee is granted an annual continuous education budget of $1,500. This fund can be applied towards conferences, professional certifications (e.g., AWS, PMP, ScrumMaster), online courses, and technical literature with prior manager approval.
+
+SECTION 4: CODE OF ETHICS AND WHISTLEBLOWER PROTECTION
+ACME maintains zero tolerance for harassment, discrimination, or retaliation. Any suspected compliance, ethical, or financial violations must be reported via the confidential 24/7 Ethics Hotline (1-800-555-ACME) or emailed to ethics@acme-corp.internal. Whistleblowers are protected from any form of adverse employment action under strict company policy.

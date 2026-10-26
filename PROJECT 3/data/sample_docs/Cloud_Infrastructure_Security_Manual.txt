@@ -1,0 +1,36 @@
+================================================================================
+ACME ENTERPRISE - CLOUD INFRASTRUCTURE & INFORMATION SECURITY MANUAL
+Document Code: SEC-OPS-2026-V4
+Classification: INTERNAL CONFIDENTIAL
+Last Reviewed: February 10, 2026
+================================================================================
+
+SECTION 1: CLOUD ARCHITECTURE AND COMPLIANCE STANDARDS
+1.1 Cloud Multi-Region Topography:
+All production workloads must be deployed within AWS us-east-1 and us-west-2 regions across at least three Availability Zones (Multi-AZ). Direct public internet routing to database tiers or backend microservices is strictly prohibited; all ingress traffic must traverse Cloudflare Enterprise WAF and AWS Application Load Balancers.
+
+1.2 Kubernetes Cluster Isolation:
+Microservices are orchestrated in isolated Amazon EKS clusters segregated by environment (Development, Staging, Production). Mutual TLS (mTLS) with Istio service mesh is enforced for all east-west pod communications.
+
+SECTION 2: IDENTITY AND ACCESS MANAGEMENT (IAM) & PASSWORDS
+2.1 Password Requirements and Rotation:
+Corporate passwords must consist of at least 14 characters, combining uppercase letters, lowercase letters, numbers, and special symbols. Corporate systems enforce a mandatory 90-day password rotation schedule. Repeated use of the last 10 passwords is automatically blocked.
+
+2.2 Multi-Factor Authentication (MFA):
+Hardware FIDO2 WebAuthn security keys or approved authenticator applications are mandatory for all employees. SMS-based 2FA is prohibited due to SIM-swapping vulnerabilities.
+
+2.3 API Keys and Service Account Tokens:
+Programmatic API tokens, OAuth credentials, and IAM access keys must never be committed to source code repositories. Secrets must be stored in HashiCorp Vault or AWS Secrets Manager. Service tokens automatically expire every 30 days and require automated CI/CD rotation.
+
+SECTION 3: INCIDENT RESPONSE AND ESCALATION PROTOCOLS
+3.1 Incident Severity Levels:
+- Severity 1 (Critical): Active data breach, zero-day exploit execution, or full customer-facing service outage.
+- Severity 2 (Major): Partial system degradation or privilege escalation vulnerability without active data compromise.
+- Severity 3 (Minor): Non-urgent bug or localized internal tool malfunction.
+
+3.2 SLA Response Times:
+For Severity 1 critical incidents, an incident commander and security operations engineer must acknowledge and initiate incident response within 15 minutes of automated PagerDuty alarm dispatch. Customer communication on status.acme-corp.com must be published within 45 minutes.
+
+SECTION 4: BACKUP, RECOVERY, AND DISASTER CONTINUITY
+4.1 Disaster Recovery Metrics:
+Production databases and persistent volumes require a Recovery Point Objective (RPO) of under 1 hour and a Recovery Time Objective (RTO) of under 4 hours. Automated snapshots are encrypted with customer-managed KMS keys and replicated to secondary regions every 6 hours. Disaster recovery failover drills are conducted semi-annually.
